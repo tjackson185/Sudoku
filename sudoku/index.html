@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/javascript/mainscript.js"></script>
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <title>Sudoku</title>
+<body onload ="startDisplay()">
+    <div id="timerContainer" class="timer-container">
+        <span id="timer" class="timer-item"></span>
+        <span id="level" class="level-item"></span>
+        <span id="speaker" class="speaker-item" onclick="toggleSpeaker()">🔈</span>
+    </div>
+    <div id="gmContainer" class="gmContainer">
+
+    </div>
+    <div id="inputContainer" class="input-container">
+      <button id="newGame"  class="btn-new-gm" onclick="openMenu()">New Game</button>
+      <div id="optionsContainer" class="options-container">
+          <div id="undo" class="option-item" onclick="undoDigitPlacement()">&#128260;</div>
+          <div id="erase" class="option-item" onclick="eraseDigit()">&#10000;</div>
+          <div id="note" class="option-item" onclick="toggleNotes()" style="border: solid black 1px">&#128221;</div>
+          <div id="hint" class="option-item" onclick="help()">&#8263;</div>
+      </div>
+      <div id="NumbersContainer" class="num-container">
+          <div id="One" class="num-item" onclick="getDigitPressed(1)">1</div>
+          <div id="Two" class="num-item" onclick="getDigitPressed(2)">2</div>
+          <div id="Three" class="num-item" onclick="getDigitPressed(3)">3</div>
+          <div id="Four" class="num-item" onclick="getDigitPressed(4)">4</div>
+          <div id="Five" class="num-item" onclick="getDigitPressed(5)">5</div>
+          <div id="Six" class="num-item" onclick="getDigitPressed(6)">6</div>
+          <div id="Seven" class="num-item" onclick="getDigitPressed(7)">7</div>
+          <div id="Eight" class="num-item" onclick="getDigitPressed(8)">8</div>
+          <div id="Nine" class="num-item" onclick="getDigitPressed(9)">9</div>
+      </div>
+    </div>
+</body>
+</html>
