@@ -567,7 +567,7 @@ function delay(time) {
 
 function checkForWin(){
     const myCollection = document.querySelectorAll("[data-game-cell]");
-    let mySoundFX = new sound("/sound/BELL11.WAV")
+    let mySoundFX = new sound("./sound/BELL11.WAV")
     let isWinner = false;
     let winCount = 0;
     
@@ -595,7 +595,7 @@ function checkForWin(){
 }
 
 function help(){
-    let mySoundFX = new sound("/sound/POP002.WAV");
+    let mySoundFX = new sound("./sound/POP002.WAV");
     const parent = document.getElementById("help");
     if(helpState == false){
         helpState = true;
@@ -611,7 +611,7 @@ function help(){
 }
 
 function exitHelp(id){
-    let mySoundFX = new sound("/sound/STAPLER.WAV");
+    let mySoundFX = new sound("./sound/STAPLER.WAV");
     const parent = document.getElementById(id);
     helpState = false;
     if(speakerState == true){mySoundFX.play();} 
@@ -631,7 +631,7 @@ function toggleSpeaker(){
 }
 
 function toggleNotes(){
-    let mySoundFX = new sound("/sound/POP002.WAV")
+    let mySoundFX = new sound("./sound/POP002.WAV")
     let note = document.getElementById('note');
     let keys = document.getElementById('NumbersContainer')
     if(NoteState == false){
@@ -648,7 +648,7 @@ function toggleNotes(){
 }
 
 function undoDigitPlacement(){
-    let mySoundFX = new sound("/sound/POP002.WAV")
+    let mySoundFX = new sound("./sound/POP002.WAV")
     if(NumbersPlaced.length != 0){
         document.getElementById(NumbersPlaced[0].id).innerHTML = "";
         document.getElementById(NumbersPlaced[0].id).style = "";
@@ -661,7 +661,7 @@ function undoDigitPlacement(){
 
 function eraseDigit(){
     const myCollection = document.querySelectorAll("[data-game-cell]");
-    let mySoundFX = new sound("/sound/POP002.WAV")
+    let mySoundFX = new sound("./sound/POP002.WAV")
     for (let i = 0; i < myCollection.length; i++) {
         if(myCollection[i].style.background == "lightblue"){
             myCollection[i].style.color = "";
@@ -728,7 +728,7 @@ function processDigitInput(id,number){
 
 function getDigitPressed(number){
     const myCollection = document.querySelectorAll("[data-game-cell]");
-    let mySoundFX = new sound("/sound/STAPLER.WAV")
+    let mySoundFX = new sound("./sound/STAPLER.WAV")
     if(NoteState == false){
         for (let i = 0; i < myCollection.length; i++) {
             if(myCollection[i].style.background == "lightblue"){
@@ -770,7 +770,7 @@ function getDigitPressed(number){
 
 function divSelected(id){
   const myCollection = document.querySelectorAll("[data-game-cell]");
-  let mySoundFX = new sound("/sound/STREAK02.WAV")
+  let mySoundFX = new sound("./sound/STREAK02.WAV")
     for (let i = 0; i < myCollection.length; i++) {
         if(myCollection[i].style.background == "lightblue"){
             myCollection[i].style.background = "white";
@@ -794,7 +794,7 @@ function divSelected(id){
 }
 
 function openMenu(){
-    let mySoundFX = new sound("/sound/STAPLER.WAV");
+    let mySoundFX = new sound("./sound/STAPLER.WAV");
     if(MenuState == true){
         MenuState = false;
         document.getElementById('GameMenu').remove();
@@ -807,7 +807,7 @@ function openMenu(){
 }
 
 function selectMenuItem(btnSelected){
-    let mySoundFX = new sound("/sound/POP002.WAV");
+    let mySoundFX = new sound("./sound/POP002.WAV");
     switch(btnSelected){
         case "Easy":
             //console.log('easy')
